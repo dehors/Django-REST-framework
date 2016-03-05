@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Snippet
+
+class SnippetModelAdmin(admin.ModelAdmin):	
+	class Meta:
+		model = Snippet
+
+admin.site.register(Snippet, SnippetModelAdmin)
+
